@@ -6,7 +6,7 @@
 /*   By: meltremb <meltremb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 11:06:51 by meltremb          #+#    #+#             */
-/*   Updated: 2023/06/12 12:19:35 by meltremb         ###   ########.fr       */
+/*   Updated: 2023/06/12 12:34:51 by meltremb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,13 @@ int	main(int argc, char **argv)
 {
 	if (argc >= 2)
 	{
-		std::string str1;
 		for (int j = 1; j < argc; j++)
 		{
-			str1 = argv[j];
-			std::string copy;
-			for (int i = 0; argv[i]; i++)
-				copy = argv[i];
-			for (size_t c = 0; c < copy.length(); c++)
-				copy[c] = toupper(copy[c]);
-			std::cout << copy;
+			std::string str;
+			str = argv[j];
+			for (size_t c = 0; c < str.length(); c++)
+				str[c] = toupper(str[c]);
+			std::cout << str;
 			if (j < argc - 1)
 				std::cout << ' ';
 		}
